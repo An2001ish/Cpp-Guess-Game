@@ -7,7 +7,25 @@
 
 using namespace std;
 
+void savescore(int guess_size) {
 
+	ifstream input("score.txt");
+
+	int score;
+
+	input >> score;
+
+	ofstream output("score.txt");
+
+	if (guess_size < score) {
+
+		output << guess_size;
+	}
+	else {
+		output << score;
+	}
+
+}
 
 void print_vector(vector<int>guesses1) {
 
